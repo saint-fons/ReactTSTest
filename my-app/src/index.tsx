@@ -1,5 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import FluentUISelectors from "./FluentUI/FluentUISelectors";
+import { ThemeProviderNestedExample } from "./FluentUI/ThemeProvider";
 import ContextHook from "./MainHooks/Context/ContextProvider";
 import MemoHook from "./MainHooks/Memo/MemoHook";
 import BooleanHook from "./ReactTSHooks/BooleanHook";
@@ -23,15 +25,20 @@ ReactDOM.render(
       <div className="three">
         <MemoHook />
       </div>
-    </div>
-    <div className="four">
-      <div>{`${wrongString} Пример работы ts с ошибок`}</div>
-      <div>
-        Enum;
+      <div className="four">
+        <div>{`${wrongString} Пример работы ts с ошибок`}</div>
+        <div>Enum;</div>
+        <div>{Season.Spring}</div>
+        <div>{Season.Summer}</div>
+        <div>{Season.Winter}</div>
       </div>
-      <div>{Season.Spring}</div>
-      <div>{Season.Summer}</div>
-      <div>{Season.Winter}</div>
+      <div className="five">{/*  <FluentUISelectors /> */}</div>
+      <div className="six">
+        <FluentUISelectors />
+        <div className="wrapper_six_theme">
+          <ThemeProviderNestedExample />
+        </div>
+      </div>
     </div>
   </React.StrictMode>,
   document.getElementById("root")
