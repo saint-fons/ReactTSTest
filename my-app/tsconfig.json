@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -19,9 +15,13 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "plugins": [{ "name": "typescript-plugin-css-modules" }]
+    "plugins": [{ "name": "typescript-plugin-css-modules" }],
+    "outDir": "dist",/* Компиляция в папвку js файлов не работает.. ? */
+    "rootDir": "src"
   },
-  "include": [
-    "src"
+  "include": ["src"],
+  "exclude": [
+    //исключения для ts
+    "IgnoreFile.ts"
   ]
 }
