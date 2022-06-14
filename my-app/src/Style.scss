@@ -27,4 +27,8 @@
 .six {
   grid-column: 3;
   grid-row: 4;
+
+  .wrapper_six_theme {
+    width: 150px;
+  }
 }
